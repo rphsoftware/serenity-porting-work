@@ -4,7 +4,7 @@ version=0.7.0
 auth_type='sha256'
 files="https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-${version}.tar.gz yaml-cpp-${version}.tar.gz 43e6a9fcb146ad871515f0d0873947e5d497a1c9c60c58cb102a97b47208b7c3"
 useconfigure=true
-configopts=("-DCMAKE_INSTALL_PREFIX=${DESTDIR}/usr/local" "-DYAML_CPP_BUILD_TESTS=OFF")
+configopts=("-DCMAKE_INSTALL_PREFIX=${SERENITY_INSTALL_ROOT}/usr/local" "-DCMAKE_INSTALL_DATADIR=${SERENITY_INSTALL_ROOT}/usr/local/lib" "-DYAML_CPP_BUILD_TESTS=OFF")
 
 # There has to be a better way to do this...
 workdir=yaml-cpp-yaml-cpp-${version}
